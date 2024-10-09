@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body{
-  background-color:black;
+  background-color:#151515;
 }
 .main-page-outer{
   display:flex;
@@ -10,6 +14,8 @@ body{
   display:flex;
   align-items: center;
   height:90vh;
+  width:7rem;
+  justify-content: center;
   transition: transform 0.3s ease;
 }
 .nav-elements{
@@ -56,5 +62,46 @@ body{
 }
 .canvas{
   width:100%;
+  overflow-y: auto;
+}
+.home-detail{
+  font-family:'Open Sans';
 }
 
+.right {
+  display: flex;
+  flex-direction: column;
+  color:white;
+}
+
+.content {
+  flex-direction: column; 
+  padding-top: 10%;
+  margin-left:0.7rem;
+  display:flex;
+  flex-direction: row;
+  
+}
+.content h1{
+  margin: 10px 10px;
+  width: 20rem;
+  font-weight: 600;
+  font-family:'Raleway';
+  padding-top: "30px";
+  margin-bottom:5rem;
+}
+
+.content h2, .content h6 {
+  margin: 10px 0;
+}
+
+.img1-div{
+  display:flex;
+  width:fit-content;
+  padding:1rem;
+}
+
+.img1-div > img{
+  width:25rem;
+  height:auto;
+}
