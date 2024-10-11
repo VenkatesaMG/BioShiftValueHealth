@@ -1,8 +1,10 @@
 import { IoIosMenu } from "react-icons/io"
 import { useState } from 'react'
 import { CiSearch } from "react-icons/ci"
+import { Button } from '@mui/material'
 import "../src/index.css";
-import Image1 from '../src/assets/Medical video.gif'
+import { IoIosArrowRoundForward } from "react-icons/io";
+import Doctor from '../src/assets/Doctor.gif'
 
 export default function mainPage() {
     const [displayNav, setDisplayNav] = useState(false)
@@ -26,7 +28,7 @@ export default function mainPage() {
                         <div className='nav-elements'>
                             <div><a href="">Home</a></div>
                             <div><a href="/login">Log In</a></div>
-                            <div><a href="">Sign Up</a></div>
+                            <div><a href="/signup">Sign Up</a></div>
                             <div><a href="">Services</a></div>
                         </div>
                     </div>
@@ -50,7 +52,7 @@ export default function mainPage() {
                     </div>
                 </div> */}
                 <div className='right'>
-                    <div className='content'>
+                    {/* <div className='content'>
                         <div>
                             <h2 style={{margin: 10, fontSize: "13px", fontFamily: "sans-serif", letterSpacing:'2px', width:'fit-content'}}>PURPOSE OF MYDNA</h2>
                             <h1>Detailed Diagonastic of your body </h1>
@@ -58,6 +60,22 @@ export default function mainPage() {
                         </div>
                         <div className='img1-div'>
                             <img src={Image1} alt="" />
+                        </div>
+                    </div> */}
+                    <div className='hero-section-outer'>
+                        <div className='hero-section'>
+                            <div className='hero-section-header'>
+                                <div>Automate,</div>
+                                <div>Record,</div>
+                                <div>Analyze Medical</div>
+                                <div>Consultations</div>
+                            </div>
+                            {/* <div className='hero-section-img'>
+                                <img src={Doctor} alt="" />
+                            </div> */}
+                        </div>
+                        <div>
+                            <Button variant="outlined" id='how-it-works'>How it Works <IoIosArrowRoundForward id='right-arrow' /></Button>
                         </div>
                     </div>
                 </div>

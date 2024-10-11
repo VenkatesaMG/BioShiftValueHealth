@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 body{
   background-color:#151515;
@@ -126,44 +127,44 @@ body{
   height:auto;
 }
 
-.login-comp{
+.signup-comp{
   height: 95vh;
   display:flex;
   justify-content: center;
   align-items: center;
 }
 
-.login-form-div{
+.signup-form-div{
   display:flex;
   font-family: 'Roboto';
   justify-content: center;
 
 }
 
-.login-header > h1{
+.signup-header > h1{
   color:white;
   font-weight:300;
   letter-spacing: 1px;
 }
 
-.login-link{
+.signup-link{
   color:whitesmoke;
   font-weight:300;
   font-size:0.9rem;
 }
 
-.login-link > a{
+.signup-link > a{
   margin:0.5rem;
   color:#c7bee2;
 }
 
-.login-input{
+.signup-input{
   display:flex;
   gap:1rem;
   margin-top:2rem;
 }
 
-.login-input > input, .email-input-div > input, .password-input-div > input{
+.signup-input > input, .email-input-div > input, .password-input-div > input{
   background-color: #3b364c;
   color:white;
   border:none;
@@ -172,7 +173,8 @@ body{
   border-radius:4px;
   padding-left: 1rem;
 }
-.login-input > input:focus, .email-input-div > input:focus, .password-input-div > input:focus{
+
+.signup-input > input:focus, .email-input-div > input:focus, .password-input-div > input:focus{
   border:none;
   outline:none;
 }
@@ -182,15 +184,113 @@ body{
 }
 
 
-.login-checkbox-div .MuiFormControlLabel-label{
+.signup-checkbox-div .MuiFormControlLabel-label{
   font-size:0.7rem;
   color:white;
 }
 
-#create-account-button{
+#signup-button{
   width: 100%;
   margin: 2rem 0rem;
   color:primary;
   text-transform: capitalize;
   font-weight:400;
+}
+
+.login-comp{
+  height:95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-header > h1{
+  font-family: 'Roboto';
+  font-weight:300;
+  color:white;
+}
+
+.login-form-div{
+  display:flex;
+  flex-direction: column;
+  gap:0.5rem;
+}
+
+.login-input-div > input{
+  background-color: #3b364c;
+  color:white;
+  border:none;
+  margin:0.5rem 0rem;
+  height:2.2rem;
+  border-radius:4px;
+  padding-left: 1rem;
+  width: 15rem;
+}
+
+.login-input-div > input:focus{
+  outline:none;
+  border:none;
+}
+
+#login-button{
+  width: 100%;
+  margin: 2rem 0rem;
+  color:primary;
+  text-transform: capitalize;
+  font-weight:400;
+}
+
+.forget-pass-div > a{
+  font-family: 'Roboto';
+  color:#c7bee2;
+  font-size:0.7rem;
+}
+
+.hero-section-outer{
+  border-left:1px solid white;
+  margin-left:3rem;
+  margin-top:2rem;
+  padding-left:2rem;
+}
+
+.hero-section{
+  display:flex;
+  flex-direction:row;
+  margin: 2rem 0rem;
+  gap:4rem;
+}
+
+.hero-section-header{
+  /* margin-left:2rem;
+  margin-top:3rem; */
+  font-family:'Oswald';
+  font-weight:500;
+  display:flex;
+  font-size: 3rem;
+  flex-direction: column;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: fit-content;
+}
+
+.hero-section-img{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section-img > img{
+  width:25rem;
+}
+#how-it-works{
+  border-radius: 2rem;
+  font-family: 'Oswald';
+  font-weight: 350;
+  letter-spacing: 2px;
+  font-size:0.7rem;
+  color:white;
+  border-color:white;
+}
+#how-it-works #right-arrow{
+  font-size:large;
+  margin-left:0.3rem;
 }
