@@ -8,19 +8,26 @@ export default function mainPage() {
     const [displayNav, setDisplayNav] = useState(false)
     function handleDisplay() {
         setDisplayNav(prevState => !prevState)
+        const n = document.getElementById("nav");
+        if(n.classList.contains("hideClass")){
+            n.classList.remove("hideClass")
+        }else {
+            n.classList.add("hideClass")
+        }
+        console.log(n.classList)
     }
     return (
         <div className='main-page-outer'>
-            <div className='nav-outer'>
-                {displayNav && <div className='nav-bar'>
+            <div className='nav-outer' id="nav">
+                {<div className='nav-bar'>
                     <div className='nav-bar-inner'>
                         <div className='nav-indicator'>
                         </div>
                         <div className='nav-elements'>
-                            <div>Home</div>
-                            <div>Log In</div>
-                            <div>Sign Up</div>
-                            <div>Services</div>
+                            <div><a href="">Home</a></div>
+                            <div><a href="/login">Log In</a></div>
+                            <div><a href="">Sign Up</a></div>
+                            <div><a href="">Services</a></div>
                         </div>
                     </div>
                 </div>}

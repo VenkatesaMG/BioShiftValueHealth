@@ -6,15 +6,25 @@
 body{
   background-color:#151515;
 }
+
 .main-page-outer{
   display:flex;
   flex-direction: row;
 }
+
+.hideClass{
+  display: none;
+}
+
+.nav-outer{
+  width:7rem;
+}
+
 .nav-bar{
   display:flex;
   align-items: center;
-  height:90vh;
-  width:7rem;
+  height: 90vh;
+  width: 100%;
   justify-content: center;
   transition: transform 0.3s ease;
 }
@@ -22,10 +32,14 @@ body{
   display:flex;
   flex-direction: column;
   gap:0.8rem;
-  color:white;
   font-family: 'Poppins';
   font-size:0.8rem;
   margin-left:1rem;
+}
+
+.nav-elements > div > a{
+  text-decoration: none;
+  color:white;
 }
 
 .nav-elements:hover{
@@ -61,8 +75,14 @@ body{
   margin-right:3rem;
 }
 .canvas{
-  width:100%;
+  flex: 1 1 0%;
   overflow-y: auto;
+}
+
+.canvas::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+  display: none;
 }
 .home-detail{
   font-family:'Open Sans';
@@ -76,7 +96,7 @@ body{
 
 .content {
   flex-direction: column; 
-  padding-top: 10%;
+  padding-top: 50px;
   margin-left:0.7rem;
   display:flex;
   flex-direction: row;
@@ -104,4 +124,73 @@ body{
 .img1-div > img{
   width:25rem;
   height:auto;
+}
+
+.login-comp{
+  height: 95vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-div{
+  display:flex;
+  font-family: 'Roboto';
+  justify-content: center;
+
+}
+
+.login-header > h1{
+  color:white;
+  font-weight:300;
+  letter-spacing: 1px;
+}
+
+.login-link{
+  color:whitesmoke;
+  font-weight:300;
+  font-size:0.9rem;
+}
+
+.login-link > a{
+  margin:0.5rem;
+  color:#c7bee2;
+}
+
+.login-input{
+  display:flex;
+  gap:1rem;
+  margin-top:2rem;
+}
+
+.login-input > input, .email-input-div > input, .password-input-div > input{
+  background-color: #3b364c;
+  color:white;
+  border:none;
+  margin:0.5rem 0rem;
+  height:2.2rem;
+  border-radius:4px;
+  padding-left: 1rem;
+}
+.login-input > input:focus, .email-input-div > input:focus, .password-input-div > input:focus{
+  border:none;
+  outline:none;
+}
+
+.email-input-div > input, .password-input-div > input{
+  width: 360px;
+}
+
+
+.login-checkbox-div .MuiFormControlLabel-label{
+  font-size:0.7rem;
+  color:white;
+}
+
+#create-account-button{
+  width: 100%;
+  margin: 2rem 0rem;
+  color:primary;
+  text-transform: capitalize;
+  font-weight:400;
 }

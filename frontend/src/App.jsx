@@ -1,12 +1,19 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import MainPage from '../components/main_page.jsx'
+import Login from '../components/login.jsx'
 
 function App() {
 
   return (
-    <>
-      <MainPage />
-    </>
+    <div style={{height: '100%'}}>
+    <BrowserRouter>
+      <Routes>
+        <Route path = '/' element = {<MainPage />}></Route>
+        <Route path = '/login' element={<Login/>}></Route>
+      </Routes>
+    </BrowserRouter>
+  </div>
   )
 }
 
