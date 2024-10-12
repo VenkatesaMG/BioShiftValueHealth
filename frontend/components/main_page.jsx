@@ -53,9 +53,6 @@ export default function mainPage() {
             duration: 1,
         })
     }
-        // const split = new SplitType(".outline-text", {
-        //     types:'lines, chars, words'
-        // })
 
     return (
         <div className='main-page-outer'>
@@ -148,25 +145,29 @@ export default function mainPage() {
                     </div>
                 </div>
                 <div className='page3-outer'>
-                    <div className='page3'>
-                        <div>
-                            <div className='page3-content'>
-                                <div className='outline-text'>
-                                    <h2>All your Patient Data in One Place</h2>
+                        <div className='page3-inter'>
+                            <div className='page3'>
+                                <div>
+                                    <div className='page3-content'>
+                                        <div className='outline-text'>
+                                            <h2>All your Patient Data in One Place</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='page3-img'>
+                                    <img src={Image3} alt="" />
+                                </div>
+                            {/* <div className="page3-content">
+                                <div className='page3-text'>Track, store, and review medical records and reports at any time.</div>
+                            </div> */}
+                            </div>
+                            <div className='page3-part2'>
+                                <div className='points'>
+                                    <li>Track</li>
+                                    <li>Store</li>
+                                    <li>Review</li>
                                 </div>
                             </div>
-                        </div>
-                        <div className='page3-img'>
-                            <img src={Image3} alt="" />
-                        </div>
-                        {/* <div className="page3-content">
-                            <div className='page3-text'>Track, store, and review medical records and reports at any time.</div>
-                        </div> */}
-                    </div>
-                </div>
-                <div className='page4-outer'>
-                    <div className='page4'>
-
                     </div>
                 </div>
             </div>

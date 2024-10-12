@@ -9,6 +9,7 @@ export default function userpage(){
         typeSpeed: 80,
         deleteSpeed: 80,
     });
+    
     return(
         <div className='user-div'>
             <div className='user-menu-outer'>
