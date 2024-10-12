@@ -5,18 +5,17 @@ import SignUp from '../components/signup.jsx'
 import Login from '../components/login.jsx'
 import User from '../components/userpage.jsx'
 function App() {
-
   return (
-    <div style={{height: '100%'}}>
-    <BrowserRouter>
-      <Routes>
-        <Route path = '/' element = {<MainPage />}></Route>
-        <Route path = '/login' element={<Login/>}></Route>
-        <Route path = '/signup' element={<SignUp />}></Route>
-        <Route path = '/services' element={<User />}></Route>
-      </Routes>
-    </BrowserRouter>
-  </div>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path = '/' element = {<MainPage />}></Route>
+          <Route path = '/login' element={<Login/>}></Route>
+          <Route path = '/signup' element={<SignUp />}></Route>
+          <Route path = '/services' element={<User />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 
