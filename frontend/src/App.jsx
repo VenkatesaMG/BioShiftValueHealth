@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import MainPage from '../components/main_page.jsx'
 import SignUp from '../components/signup.jsx'
 import Login from '../components/login.jsx'
-
+import User from '../components/userpage.jsx'
 function App() {
 
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path = '/' element = {<MainPage />}></Route>
         <Route path = '/login' element={<Login/>}></Route>
         <Route path = '/signup' element={<SignUp />}></Route>
+        <Route path = '/services' element={<User />}></Route>
       </Routes>
     </BrowserRouter>
   </div>

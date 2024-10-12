@@ -6,7 +6,7 @@ export default function signup(){
             <div className='signup-form-div'>
                 <div className='signup-right-div'>
                     <div className='signup-header'><h1>Create an account</h1></div>
-                    <div className='signup-link'>Already have an account?<a href="">Log in</a></div>
+                    <div className='signup-link'>Already have an account?<a href="/login">Log in</a></div>
                     <div>
                         <form action="">
                             <div className='signup-input'>

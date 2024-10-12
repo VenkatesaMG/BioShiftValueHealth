@@ -68,7 +68,7 @@ export default function mainPage() {
                             <div><a href="">Home</a></div>
                             <div><a href="/login">Log In</a></div>
                             <div><a href="/signup">Sign Up</a></div>
-                            <div><a href="">Services</a></div>
+                            <div><a href="/services">Services</a></div>
                         </div>
                     </div>
                 </div>
@@ -159,14 +159,14 @@ export default function mainPage() {
                         <div className='page3-img'>
                             <img src={Image3} alt="" />
                         </div>
-                        <div className="page3-content">
+                        {/* <div className="page3-content">
                             <div className='page3-text'>Track, store, and review medical records and reports at any time.</div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className='page4-outer'>
                     <div className='page4'>
-                        
+
                     </div>
                 </div>
             </div>
