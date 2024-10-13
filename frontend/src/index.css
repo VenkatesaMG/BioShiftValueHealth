@@ -450,11 +450,16 @@ body::-webkit-scrollbar{
   background-color: white;
 }
 
+.user-menu-outer{
+  background-color: #6C757D;
+}
+
 .user-menu-bar{
   display:flex;
   align-items:center;
-  justify-content: end;
+  justify-content: space-between;
   margin-right:1.5rem;
+  height:fit-content;
 }
 
 .search-div-outer{
@@ -518,4 +523,9 @@ body::-webkit-scrollbar{
   font-size: 2rem;
   height:2.3rem;
   color: black; 
+}
+
+.changeListBackground{
+  background-color:#6C757D;
+  color:white;
 }

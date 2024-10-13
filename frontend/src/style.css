@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: transparent;
+    padding:1rem;
 }
 
 .user-tools-upper, .user-tools-lower{
@@ -35,13 +36,12 @@
 }
 
 .mic-div{
-    border:1px black solid;
     padding:1rem;
     width:2rem;
     display:flex;
     justify-content: center;
     border-radius:2rem;
-    background-color: #002244;
+    background-color:#ADB5BD;
 }
 
 .mic-ele{
@@ -53,7 +53,7 @@
     width:2rem;
     padding:1rem;
     justify-content: center;
-    background-color: #002244;
+    background-color: #ADB5BD;
     border-radius:10px;
 }
 
@@ -72,7 +72,7 @@
     width:9rem;
     padding:1rem;
     justify-content: center;
-    background-color: #002244;
+    background-color: #343A40;
     border-radius:10px;
 }
 
@@ -81,46 +81,41 @@
     color:white;
 }
 
-.client-info-outer{
-    height:100vh;
-    background-color: white;
-    width: 100%;
-}
-
 .client-info-page{
     display:flex;
     width: 100%;
+    background-color: #E9ECEF;
     /* justify-content: center;
     gap:10rem; */
 }
 
 .client-left-div{
-    width:fit-content;
+    width:50%;
     display: flex;
     align-items: center;
-    margin-left:7rem;
+    margin-left:5rem;    
+    justify-content: center;
+    transform: translateY(-3rem);
+    height:96vh;
 }
 
 .patient-outer-div{
     display:flex;
     flex-direction: column;
-    justify-content: center;
     width: fit-content;
     gap:1.5rem;
     font-family: 'Roboto';
     align-items: center;
     min-height:0;
-    margin:1rem;
 }
-
 .patient-img{
-    width:fit-content;
+    display:flex;
+    justify-content: left;
+    width:100%;
 }
-
 .patient-img > img{
-    height:15rem;
-    border:1px solid black;
-    justify-content: center;
+    height:10rem;
+    margin-left:1rem;
 }
 
 .patient-details{
@@ -132,6 +127,7 @@
 
 .patient-details-div{
     display: flex;
+    align-items: center;
 }
 
 .patient-details-div .label-div{
@@ -146,6 +142,7 @@
     display: flex;
     flex-direction: column;
     width:100%;
+    height:100vh;
 }
 
 .top-right-div{
@@ -161,7 +158,7 @@
     margin: 1rem auto;
     position: relative;
     border-radius: 30px;
-    background: #002244;
+    background: #343A40;
     /* border:1px solid black; */
     display: flex;
 }

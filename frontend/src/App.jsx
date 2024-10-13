@@ -17,7 +17,12 @@ function App() {
           <Route path = '/' element = {<MainPage />}></Route>
           <Route path = '/login' element={<Login/>}></Route>
           <Route path = '/signup' element={<SignUp />}></Route>
-          <Route path = '/services' element={<Client handleToggle = {handleToggle} toggleState = {toggle} />}></Route>
+          <Route path = '/services' 
+              element={<Client 
+                        handleToggleState = {handleToggle} 
+                        toggleState = {toggle} 
+                      />}>            
+          </Route>
           {/* <Route path = '/' element={<Client />}></Route> */}
         </Routes>
       </BrowserRouter>

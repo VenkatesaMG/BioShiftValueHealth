@@ -25,10 +25,10 @@ function ToggleButton(props) {
                     }}
                 ></div>
                 <button type="button" className={`toggle-btn ${position == 'left' ? 'toggle-color' : ''}`} onClick={leftClick}>
-                    Diagnose Patient
+                    Patient History
                 </button>
                 <button type="button" className={`toggle-btn ${position == 'right' ? 'toggle-color' : ''}`} onClick={rightClick}>
-                    Patient History
+                    Diagnose Patient
                 </button>
             </div>
         </div>

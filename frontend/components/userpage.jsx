@@ -1,4 +1,4 @@
-import AccountMenu from './menu'
+import AccountMenu from './account_menu'
 import Search from './search'
 import { useTypewriter } from 'react-simple-typewriter'
 

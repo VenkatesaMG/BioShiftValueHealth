@@ -2,12 +2,16 @@ import patientImg from '../src/assets/patient_img1.jpg'
 import Toggle from './toggle'
 import ToggleText from './toggle_text'
 import Record from './record'
-import AccountMenu from './menu'
+import AccountMenu from './account_menu'
+import UserMenu from './user_menu'
+import PatientTimeLine from './timeline'
+
 export default function client_info(props){
     return(
         <div className='client-info-outer'>
             <div className='user-menu-outer'>
                 <div className='user-menu-bar'>
+                    <div><UserMenu /></div>
                     <div style={{margin:'0.5rem'}}><AccountMenu /></div>
                 </div>
             </div>
@@ -30,10 +34,6 @@ export default function client_info(props){
                                 <div className='label-div'>Age:</div>
                                 <div className='detail-fill'>30</div>
                             </div>
-                            <div className='patient-details-div'>
-                                <div className='label-div'>Address:</div>
-                                <div className='detail-fill'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis</div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -41,12 +41,13 @@ export default function client_info(props){
                     <div className='top-right-div'>
                         <div>
                             <ToggleText 
-                                handleToggle = {props.handleToggle}
+                                handleToggle = {props.handleToggleState}
                             />
                         </div>
                     </div>
                     <div style={{marginTop:'0rem'}}>
                         {props.toggleState == 1 && <Record />}
+                        {props.toggleState == 0 && <PatientTimeLine />}
                     </div>
                 </div>
             </div>
