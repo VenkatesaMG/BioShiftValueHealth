@@ -1,17 +1,27 @@
 import patientImg from '../src/assets/patient_img1.jpg'
-import Toggle from './toggle'
 import ToggleText from './toggle_text'
 import Record from './record'
 import AccountMenu from './account_menu'
 import UserMenu from './user_menu'
 import PatientTimeLine from './timeline'
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import HomeIcon from '@mui/icons-material/Home';
+import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
+import BiotechOutlinedIcon from '@mui/icons-material/BiotechOutlined';
 
 export default function client_info(props){
+    const icons = [<HomeIcon />, <DescriptionOutlinedIcon />, <FolderOpenOutlinedIcon />, <BiotechOutlinedIcon />]
+    const labels = ['Overview', 'Notes', 'Documents', 'Labs']
     return(
         <div className='client-info-outer'>
             <div className='user-menu-outer'>
                 <div className='user-menu-bar'>
-                    <div><UserMenu /></div>
+                    <div>
+                        <UserMenu 
+                            menuIcons = {icons}
+                            menuLabels = {labels}
+                        />
+                    </div>
                     <div style={{margin:'0.5rem'}}><AccountMenu /></div>
                 </div>
             </div>

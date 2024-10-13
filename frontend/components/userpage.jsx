@@ -1,6 +1,8 @@
 import AccountMenu from './account_menu'
 import Search from './search'
 import { useTypewriter } from 'react-simple-typewriter'
+import AppSearch from './app_search_bar.jsx'
+import UserMenu from './user_menu.jsx'
 
 export default function userpage(){
     const [ text ] = useTypewriter({
@@ -14,6 +16,7 @@ export default function userpage(){
         <div className='user-div'>
             <div className='user-menu-outer'>
                 <div className='user-menu-bar'>
+                    <div><UserMenu /></div>
                     <div style={{margin:'0.5rem'}}><AccountMenu /></div>
                 </div>
             </div>

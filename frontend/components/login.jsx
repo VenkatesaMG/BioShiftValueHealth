@@ -1,5 +1,10 @@
 import {Button} from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 export default function login(){
+    const navigator = useNavigate();
+    function handleSignIn(){
+        navigator('/userpage')
+    }
     return(
         <div className='login-comp'>
                 <div className='login-right-div'>
@@ -14,7 +19,7 @@ export default function login(){
                                 </div>
                                 <div className='forget-pass-div'><a href="">Forget Password?</a></div>
                                 <div>
-                                    <Button variant="contained" id='login-button'>Sign In</Button>
+                                    <Button variant="contained" id='login-button' onClick={handleSignIn}>Sign In</Button>
                                 </div>
                             </div>
                         </form>

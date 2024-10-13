@@ -8,15 +8,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { IoIosMenu } from "react-icons/io";
-import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
-import HomeIcon from '@mui/icons-material/Home';
-import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
-import BiotechOutlinedIcon from '@mui/icons-material/BiotechOutlined';
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer({menuIcons = [], menuLabels = []}) {
   const [open, setOpen] = React.useState(false);
   const [listItem, setListItem] = React.useState(0);
   const toggleDrawer = (newOpen) => () => {
@@ -27,11 +21,10 @@ export default function TemporaryDrawer() {
     setListItem(index)
   }
 
-  const menuIcons = [<HomeIcon />, <DescriptionOutlinedIcon />, <FolderOpenOutlinedIcon />, <BiotechOutlinedIcon />]
   const DrawerList = (
     <Box sx={{width: 250, backgroundColor:'white'}} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {['Overview', 'Notes', 'Documents', 'Labs'].map((text, index) => (
+        {menuLabels.map((text, index) => (
           <ListItem key={text} disablePadding className= {listItem === index ? 'changeListBackground' : '' }>
             <ListItemButton onClick={() => handleChangeList(index)}>
               <ListItemIcon>

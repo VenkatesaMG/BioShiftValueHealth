@@ -5,6 +5,7 @@ import SignUp from '../components/signup.jsx'
 import Login from '../components/login.jsx'
 import User from '../components/userpage.jsx'
 import Client from '../components/client_info.jsx'
+
 function App() {
   const [toggle, setToggle] = useState(0)
   function handleToggle(){
@@ -23,7 +24,7 @@ function App() {
                         toggleState = {toggle} 
                       />}>            
           </Route>
-          {/* <Route path = '/' element={<Client />}></Route> */}
+          <Route path = '/userpage' element={<User />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
