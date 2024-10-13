@@ -66,7 +66,6 @@ export default function mainPage() {
                             <div><a href="">Home</a></div>
                             <div><a href="/login">Log In</a></div>
                             <div><a href="/signup">Sign Up</a></div>
-                            <div><a href="/services">Services</a></div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +77,7 @@ export default function mainPage() {
                         <div style={{ fontSize: '1rem' }}>Menu</div>
                     </div>
                     <div className='search-icon'>
-                        <CiSearch style={{ color: 'white' }} />
+                        <CiSearch style={{ color: 'white', fontSize:'1.2rem'}} />
                     </div>
                 </div>
                 {/* <div>

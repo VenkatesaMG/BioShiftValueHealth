@@ -160,24 +160,23 @@ body::-webkit-scrollbar{
   display:flex;
   font-family: 'Roboto';
   justify-content: center;
-
 }
 
 .signup-header > h1{
-  color:white;
+  color:black;
   font-weight:300;
   letter-spacing: 1px;
 }
 
 .signup-link{
-  color:whitesmoke;
-  font-weight:300;
+  color:black;
+  font-weight:400;
   font-size:0.9rem;
 }
 
 .signup-link > a{
   margin:0.5rem;
-  color:#c7bee2;
+  color:black;
 }
 
 .signup-input{
@@ -208,7 +207,7 @@ body::-webkit-scrollbar{
 
 .signup-checkbox-div .MuiFormControlLabel-label{
   font-size:0.7rem;
-  color:white;
+  color:black;
 }
 
 #signup-button{
@@ -226,10 +225,14 @@ body::-webkit-scrollbar{
   align-items: center;
 }
 
+.login-right-div{
+  padding:1rem 2rem;
+}
+
 .login-header > h1{
   font-family: 'Roboto';
   font-weight:300;
-  color:white;
+  color:black;
 }
 
 .login-form-div{
@@ -264,8 +267,8 @@ body::-webkit-scrollbar{
 
 .forget-pass-div > a{
   font-family: 'Roboto';
-  color:#c7bee2;
-  font-size:0.7rem;
+  color:black;
+  font-size:0.8rem;
 }
 .page1{
   margin:1rem;

@@ -24,9 +24,9 @@ export default function signup(){
                                     control={
                                         <Checkbox
                                             sx={{
-                                                color: 'white',
+                                                color: 'black',
                                                 '&.Mui-checked': {
-                                                color: 'white',
+                                                color: 'black',
                                                 },
                                                 '& .MuiSvgIcon-root': {
                                                 borderRadius: '4px',
@@ -36,7 +36,7 @@ export default function signup(){
                                     }
                                     label= {
                                         <>I agree to the {' '}
-                                            <a href="#" style={{ color:'#c7bee2', textDecoration: 'underline' }}>
+                                            <a href="#" style={{ color:'black', textDecoration: 'underline' }}>
                                             Terms & Conditions</a>
                                         </>
                                     }
