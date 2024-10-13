@@ -10,7 +10,7 @@ html, body {
   padding: 0;
   height: 100%;
   box-sizing: border-box;
-  background-color:#151515;
+  background-color:#E9ECEF;
 }
 
 body::-webkit-scrollbar{
@@ -32,7 +32,8 @@ body::-webkit-scrollbar{
 .nav-outer{
   width:7rem;
   position:fixed;
-  background-color: #151515;
+  background-color: white;
+  color:black;
   z-index:1000;
 }
 
@@ -40,29 +41,32 @@ body::-webkit-scrollbar{
   display:flex;
   align-items: center;
   height: 100vh;
-  width: 100%;
   justify-content: center;
 }
 
 .nav-elements{
   display:flex;
   flex-direction: column;
-  gap:0.8rem;
+  gap:1rem;
   font-family: 'Poppins';
   font-size:0.8rem;
+  width:auto;
 }
 
 .nav-elements > div > a{
   text-decoration: none;
-  color:white;
+  font-size:0.8rem;
+  font-weight:500;
+  color:black;
 }
 
 .nav-elements:hover{
   cursor: pointer;
 }
 
+
 .home-detail{
-  color:white;
+  color:black;
   font-family:'Poppins';
   font-size:0.8rem;
   font-weight:600;
@@ -72,21 +76,20 @@ body::-webkit-scrollbar{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom:1px solid white;
-  height:2rem;
+  height:3rem;
   position:fixed;
   top: 0;
   left: 0;
   width:100%;
   z-index: 1000;
-  background-color: #151515;
+  background-color: #6C757D;
 }
 
 .menu-icon-div{
   display:flex;
   flex-direction:row;
   gap:0.7rem;
-  color:white;
+  color:black;
   align-items: center;
   font-family:'Poppins';
   margin-left:1rem;
@@ -110,7 +113,7 @@ body::-webkit-scrollbar{
 .page1 {
   display: flex;
   flex-direction: column;
-  color:white;
+  color:black;
   height:100vh;
 }
 
@@ -269,7 +272,6 @@ body::-webkit-scrollbar{
 }
 
 .hero-section-outer{
-  border-left:1px solid white;
   margin-left: 1rem;
   margin-top:2rem;
   padding-left:2rem;
@@ -309,11 +311,11 @@ body::-webkit-scrollbar{
 #how-it-works{
   border-radius: 2rem;
   font-family: 'Oswald';
-  font-weight: 350;
+  font-weight: 600;
   letter-spacing: 2px;
   font-size:0.7rem;
-  color:white;
-  border-color:white;
+  color:black;
+  border-color:black;
 }
 
 #how-it-works #right-arrow{
@@ -327,7 +329,7 @@ body::-webkit-scrollbar{
 
 .page2{
   font-family: 'Roboto';
-  color:white;
+  color:black;
   display:flex;
   margin-left:3rem;
   gap:3rem;
@@ -394,7 +396,7 @@ body::-webkit-scrollbar{
 .outline-text{
   /* -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 0.5px; */
-  color:white;
+  color:black;
   font-family:'Oswald';
   font-size:2.5rem;
   text-transform: uppercase;
@@ -436,7 +438,7 @@ body::-webkit-scrollbar{
   justify-content: center;
   gap:10rem;
   align-items: center;
-  color:white;
+  color:black;
   font-family: 'Oswald';
   font-size:1rem;
   text-transform: uppercase;

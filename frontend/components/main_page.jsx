@@ -14,6 +14,7 @@ import SplitType from 'split-type'
 
 export default function mainPage() {
     const [displayNav, setDisplayNav] = useState(false)
+    const [page, setPage] = useState(0)
     function handleDisplay() {
         setDisplayNav(prevState => !prevState)
         // const n = document.getElementById("nav");
@@ -74,7 +75,7 @@ export default function mainPage() {
                 <div className='menu-ribbon-div'>
                     <div className='menu-icon-div'>
                         <IoIosMenu style={{ color: 'white', fontSize: '1.5rem' }} onClick={handleDisplay} />
-                        <div style={{ fontSize: '0.8rem' }}>Menu</div>
+                        <div style={{ fontSize: '1rem' }}>Menu</div>
                     </div>
                     <div className='search-icon'>
                         <CiSearch style={{ color: 'white' }} />
