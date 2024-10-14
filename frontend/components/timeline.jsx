@@ -6,25 +6,49 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
-import data from '../data/timeline_data.js';
+import { data, description } from '../data/timeline_data.js';
+import { useState } from 'react'
 import Card from './card.jsx';
 
+
 export default function CustomizedTimeline() {
+  const [visibleCards, setVisibleCards] = useState([false, false, false]); 
+
+  const cards = description["August"].map((item, index) => (
+    <Card 
+      key={index}
+      headers={data["August"][index]}
+      description = {item}
+    />
+  ))
+
+  let hoverTimeout = null;
 
   function handleMouseOver(index){
-    console.log("Event Mouse Over", index)
+    setVisibleCards(prevState => {
+      const newState = [...prevState]
+      newState[index] = true
+      return newState
+    })
+    console.log(`handleMouseOver ${index}`, visibleCards[index])
   }
 
   function handleMouseLeave(index){
-    console.log("Event Mouse Leave", index) 
+    setTimeout(()=>{
+      clearTimeout(hoverTimeout)
+    }, 5000)
+
+    setVisibleCards(prevState => {
+      const newState = [...prevState]
+      newState[index] = false
+      return newState
+    })
+    console.log("handleMouseLeave", visibleCards[index])
   }
+
   return (
-    <Timeline position="alternate">
+    <Timeline position="right">
       {data["August"].map((event, index) => (
         <TimelineItem key={index}>
           <TimelineOppositeContent
@@ -41,14 +65,21 @@ export default function CustomizedTimeline() {
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent sx={{ py: '20px', px: 2 }}>
-            <Typography variant="h6" 
-            component="span" 
-            style = {{cursor:'default'}} 
-            onMouseOver={() => handleMouseOver(index)}
-            onMouseLeave={() => handleMouseLeave(index)}>
+          <TimelineContent sx={{ py: '25px', px: 2}}>
+          <div 
+            onMouseEnter={() => handleMouseOver(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
+          >
+            <Typography variant="h6"
+              component="span"
+              style = {{cursor:'default'}} 
+            >
               {event}
             </Typography>
+            <Typography>
+              {visibleCards[index] && cards[index]}
+            </Typography>
+          </div>
           </TimelineContent>
         </TimelineItem>
       ))}

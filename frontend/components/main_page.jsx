@@ -74,7 +74,7 @@ export default function mainPage() {
                 <div className='menu-ribbon-div'>
                     <div className='menu-icon-div'>
                         <IoIosMenu style={{ color: 'white', fontSize: '1.5rem' }} onClick={handleDisplay} />
-                        <div style={{ fontSize: '1rem' }}>Menu</div>
+                        <div style={{ fontSize: '1rem', color:"white"}}>Menu</div>
                     </div>
                     <div className='search-icon'>
                         <CiSearch style={{ color: 'white', fontSize:'1.2rem'}} />
