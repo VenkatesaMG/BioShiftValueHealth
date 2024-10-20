@@ -10,16 +10,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { IoIosMenu } from "react-icons/io";
 
-export default function TemporaryDrawer({menuIcons = [], menuLabels = []}) {
+export default function TemporaryDrawer({menuIcons = [], menuLabels = [], listItem, handleChangeList}) {
   const [open, setOpen] = React.useState(false);
-  const [listItem, setListItem] = React.useState(0);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
-  function handleChangeList(index){
-    setListItem(index)
-  }
 
   const DrawerList = (
     <Box sx={{width: 250, backgroundColor:'white'}} role="presentation" onClick={toggleDrawer(false)}>

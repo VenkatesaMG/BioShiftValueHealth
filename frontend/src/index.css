@@ -464,7 +464,7 @@ body::-webkit-scrollbar{
   align-items:center;
   justify-content: space-between;
   margin-right:1.5rem;
-  height:fit-content;
+  height:2.7rem;
 }
 
 .search-div-outer{
@@ -533,4 +533,51 @@ body::-webkit-scrollbar{
 .changeListBackground{
   background-color:#6C757D;
   color:white;
+}
+
+.doc-div{
+  display:flex;
+  align-items: center;
+  border:1px solid black;
+  padding:0.1rem;
+  width:fit-content;
+  border-radius:5px;
+  padding-left: 0.6rem;
+}
+.doc-div:hover{
+  cursor: pointer;
+}
+.doc-folder-icon{
+  display:flex;
+  align-items: center;
+}
+.doc-div > div, .doc-right-div > div{
+  display:flex;
+  align-items: center;
+}
+.doc-right-div{
+  padding: 0rem 0.5rem; 
+}
+
+.folder-canvas{
+  font-family:'Roboto';
+  display:flex;
+  flex-direction:column;
+  margin-left:1.5rem;
+}
+
+.folder-section{
+  display:flex;
+  flex-direction: column;
+  gap:0.5rem;
+  margin-top:1.5rem;
+}
+
+.folder-components{
+  display:flex;
+  gap:1rem;
+}
+
+.document-title{
+  margin-top:1rem;
 }
