@@ -17,6 +17,7 @@ export default function record(props) {
   }
 
   function generateReport() {
+    props.handleOverScreen();
     if (!file) {
       console.log("No file selected");
       return;
