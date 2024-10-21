@@ -16,8 +16,7 @@ import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import HomeIcon from "@mui/icons-material/Home";
 import FolderOpenOutlinedIcon from "@mui/icons-material/FolderOpenOutlined";
 import BiotechOutlinedIcon from "@mui/icons-material/BiotechOutlined";
-import DropDown from "../components/dropdown.jsx";
-import OverScreen from "../components/overscreen.jsx";
+import CreatePatient from "../components/create_patient.jsx";
 const icons = [
   <HomeIcon />,
   <DescriptionOutlinedIcon />,
@@ -73,7 +72,7 @@ function App() {
             />
           }
         ></Route>
-        <Route path="/demo" element={<OverScreen />}></Route>
+        <Route path="/demo" element={<CreatePatient />}></Route>
       </Routes>
     </div>
   );
