@@ -709,6 +709,16 @@ body::-webkit-scrollbar {
   padding: 1rem;
 }
 
+.signup-img {
+  background-color: #ffd8dc;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.signup-img > img {
+  width: 100vh;
+}
+
 .patient-name-div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

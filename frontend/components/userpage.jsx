@@ -39,7 +39,7 @@ export default function userpage(props) {
     event.preventDefault();
     console.log(`Name : ${props.name}, Phone : ${props.phone}`);
     axios
-      .get("127.0.0.1:8000/create/", {
+      .get("http://127.0.0.1:5000/searchpatient", {
         params: {
           name: props.name,
           phone: props.phone,
