@@ -5,14 +5,54 @@ import AppSearch from "./app_search_bar.jsx";
 import SearchIcon from "@mui/icons-material/Search";
 import PatientImg from "../src/assets/userpage_bg.png";
 import UserMenu from "./user_menu.jsx";
+import { typographyClasses } from "@mui/material";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function userpage() {
+export default function userpage(props) {
   const [text] = useTypewriter({
     words: ["Hi George"],
     loop: 1,
     typeSpeed: 80,
     deleteSpeed: 80,
   });
+  const navgiate = useNavigate();
+
+  // const fetchPatient = (name, phone_number) => {
+  //   axios
+  //     .get("http://127.0.0.1:8000/api/", {
+  //       params: {
+  //         name: name,
+  //         phone: phone_number,
+  //       },
+  //     })
+  //     .then((res) => {
+  //       console.log("Reponse : ", response.status);
+  //     })
+  //     .catch((error) => {
+  //       console.log("There is an error!", error);
+  //     });
+  // };
+
+  const fetchPatient = (event) => {
+    event.preventDefault();
+    console.log(`Name : ${props.name}, Phone : ${props.phone}`);
+    axios
+      .get("127.0.0.1:8000/create/", {
+        params: {
+          name: props.name,
+          phone: props.phone,
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+        navgiate("/services");
+      })
+      .catch((error) => {
+        console.log("Error : ", error);
+      });
+  };
 
   return (
     <div className="user-div">
@@ -31,12 +71,23 @@ export default function userpage() {
           <div className="components-outer-div">
             <div className="type-text">{text}</div>
             <div>
-              <form action="" className="fetch-user-div">
+              <form onSubmit={fetchPatient} className="fetch-user-div">
                 <div>
-                  <input type="text" placeholder="Name" />
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={props.name}
+                    onChange={(e) => props.handleChangeName(e.target.value)}
+                  />
                 </div>
                 <div>
-                  <input type="phone" placeholder="Phone" maxLength={10} />
+                  <input
+                    type="phone"
+                    placeholder="Phone"
+                    maxLength={10}
+                    value={props.phone}
+                    onChange={(e) => props.handleChangePhone(e.target.value)}
+                  />
                 </div>
                 <div>
                   <button id="userpage-search" type="submit">

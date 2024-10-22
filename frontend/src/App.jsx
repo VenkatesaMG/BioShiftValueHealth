@@ -27,7 +27,19 @@ const labels = ["Overview", "Notes", "Documents"];
 function App() {
   const [toggle, setToggle] = useState(0);
   const [listItem, setListItem] = useState(0);
+  const [name, setName] = useState(null);
+  const [phone, setPhone] = useState(null);
+
   const navigate = useNavigate();
+
+  function handleChangeName(value) {
+    setName((prevState) => value);
+  }
+
+  function handleChangePhone(value) {
+    setPhone((prevState) => value);
+  }
+
   function handleChangeList(index) {
     setListItem(index);
     console.log(index);
@@ -59,7 +71,17 @@ function App() {
             />
           }
         ></Route>
-        <Route path="/userpage" element={<User />}></Route>
+        <Route
+          path="/userpage"
+          element={
+            <User
+              name={name}
+              phone={phone}
+              handleChangeName={handleChangeName}
+              handleChangePhone={handleChangePhone}
+            />
+          }
+        ></Route>
         <Route
           path="/documents"
           element={
