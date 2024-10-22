@@ -21,9 +21,8 @@ const icons = [
   <HomeIcon />,
   <DescriptionOutlinedIcon />,
   <FolderOpenOutlinedIcon />,
-  <BiotechOutlinedIcon />,
 ];
-const labels = ["Overview", "Notes", "Documents", "Labs"];
+const labels = ["Overview", "Notes", "Documents"];
 
 function App() {
   const [toggle, setToggle] = useState(0);

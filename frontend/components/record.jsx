@@ -9,7 +9,11 @@ import axios from "axios";
 
 export default function record(props) {
   const fileInputRef = useRef(null);
+  const imageInputRef = useRef(null);
   const [file, setFile] = useState(null);
+  const [audioFile, setAudioFile] = useState(null);
+  const [images, setImages] = useState([]);
+  const [report, setGenerateReport] = useState(null);
 
   function triggerFileUpload() {
     console.log("Triggered File Upload");
@@ -18,13 +22,43 @@ export default function record(props) {
 
   function generateReport() {
     props.handleOverScreen();
+
     if (!file) {
       console.log("No file selected");
       return;
     }
+
     const formData = new FormData();
     formData.append("file", file);
 
+    try {
+      axios
+        .post("http://127.0.0.1:5000/upload", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((response) => {
+          console.log("File uploaded successfully", response.data);
+          setGenerateReport(response.data);
+        })
+        .catch((error) => {
+          console.error("Error uploading file:", error);
+        });
+    } catch (error) {
+      console.log("Error:", error);
+    }
+  }
+
+  const handleFileChange = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      setFile(selectedFile);
+      console.log("File selected:", selectedFile.name);
+    } else {
+      console.log("No File Selected");
+      return;
+    }
     try {
       axios
         .post("http://127.0.0.1:5000/upload", formData, {
@@ -40,14 +74,6 @@ export default function record(props) {
         });
     } catch (error) {
       console.log("Error:", error);
-    }
-  }
-
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-    if (selectedFile) {
-      setFile(selectedFile);
-      console.log("File selected:", selectedFile.name);
     }
   };
 
@@ -71,14 +97,14 @@ export default function record(props) {
               <div className="user-ele-div text-class">Upload Audio</div>
             </button>
           </div>
-          <div>
+          {/* <div>
             <button className="user-tools-div" onClick={triggerFileUpload}>
               <div className="user-ele-div upload-div">
                 <FontAwesomeIcon icon={faUpload} className="upload-ele" />
               </div>
               <div className="user-ele-div text-class">Upload Scan</div>
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="user-tools-lower">
           <div>

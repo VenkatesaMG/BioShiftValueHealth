@@ -283,11 +283,11 @@ body::-webkit-scrollbar {
 }
 .page1 {
   margin: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-section-outer {
-  margin-left: 1rem;
-  margin-top: 2rem;
   padding-left: 2rem;
 }
 
@@ -340,6 +340,7 @@ body::-webkit-scrollbar {
 
 .page2-outer {
   height: 100vh;
+  margin-top: 5rem;
 }
 
 .page2 {
@@ -525,6 +526,38 @@ body::-webkit-scrollbar {
 .search-div > form > input:focus {
   border: none;
   outline: none;
+}
+
+.fetch-user-div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.fetch-user-div > div > input {
+  border: 1px solid black;
+  width: 10rem;
+  height: 1.5rem;
+  background-color: transparent;
+  padding: 0.25rem 1rem;
+}
+
+.fetch-user-div > div > input:focus {
+  outline: none;
+}
+
+#userpage-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+#userpage-search:hover {
+  cursor: pointer;
 }
 
 .components-outer-div {
@@ -716,4 +749,7 @@ body::-webkit-scrollbar {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
+  background: transparent;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
 }
