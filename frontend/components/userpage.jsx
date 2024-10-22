@@ -3,6 +3,7 @@ import Search from "./search";
 import { useTypewriter } from "react-simple-typewriter";
 import AppSearch from "./app_search_bar.jsx";
 import SearchIcon from "@mui/icons-material/Search";
+import PatientImg from "../src/assets/userpage_bg.png";
 import UserMenu from "./user_menu.jsx";
 
 export default function userpage() {
@@ -28,6 +29,7 @@ export default function userpage() {
       <div>
         <div>
           <div className="components-outer-div">
+            <div className="type-text">{text}</div>
             <div>
               <form action="" className="fetch-user-div">
                 <div>
@@ -37,21 +39,24 @@ export default function userpage() {
                   <input type="phone" placeholder="Phone" maxLength={10} />
                 </div>
                 <div>
-                  <button id="userpage-search">
+                  <button id="userpage-search" type="submit">
                     <SearchIcon style={{ fontSize: "1rem" }} />
                   </button>
                 </div>
               </form>
               <div style={{ marginTop: "1rem" }}>
                 <a
-                  style={{ fontFamily: "Open Sans", fontSize: "0.9rem" }}
+                  style={{
+                    fontFamily: "Open Sans",
+                    fontSize: "0.9rem",
+                    color: "black",
+                  }}
                   href="/demo"
                 >
-                  New Patient
+                  New Patient ?
                 </a>
               </div>
             </div>
-            {/* <div className="type-text">{text}</div> */}
             {/* <img src="src/assets/George.jpeg" alt="" /> */}
           </div>
         </div>
