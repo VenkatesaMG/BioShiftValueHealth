@@ -82,7 +82,7 @@ export default function userpage(props) {
                 </div>
                 <div>
                   <input
-                    type="phone"
+                    type="text"
                     placeholder="Phone"
                     maxLength={10}
                     value={props.phone}

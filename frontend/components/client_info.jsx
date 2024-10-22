@@ -6,6 +6,7 @@ import UserMenu from "./user_menu";
 import PatientTimeLine from "./timeline";
 import OverScreen from "./overscreen";
 import { useState } from "react";
+import CircleIcon from "@mui/icons-material/Circle";
 
 export default function client_info(props) {
   const [overscreen, setOverScreen] = useState(false);
@@ -55,18 +56,122 @@ export default function client_info(props) {
               </div>
             </div>
           </div>
+          {/* <div className="client-allergies">
+            <div>
+              <div>
+                <div>
+                  <div style={{ letterSpacing: "2px" }}>Allergies</div>
+                </div>
+                <br />
+                <div
+                  style={{
+                    fontFamily: "Roboto",
+                  }}
+                >
+                  <div>Pencillin</div>
+                  <div>IV Contrast </div>
+                </div>
+              </div>
+              <br />
+              <div>
+                <div>
+                  <div style={{ letterSpacing: "2px" }}>Conditions</div>
+                </div>
+                <br />
+                <div style={{ fontFamily: "Roboto" }}>
+                  <div>Diabetes</div>
+                  <div>Hypertension</div>
+                </div>
+              </div>
+            </div>
+          </div> */}
         </div>
         <div className="client-right-div">
-          <div className="top-right-div">
+          <div className="client-allergies">
             <div>
-              <ToggleText handleToggle={props.handleToggleState} />
+              <div>
+                <div>
+                  <div
+                    style={{
+                      letterSpacing: "2px",
+                      borderBottom: "1px solid black",
+                    }}
+                  >
+                    Allergies
+                  </div>
+                </div>
+                <br />
+                <div
+                  style={{
+                    fontFamily: "Roboto",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.2rem",
+                  }}
+                >
+                  <div className="allergies-inner-div">
+                    <div>
+                      <CircleIcon id="client-allergies-dot" />
+                    </div>
+                    <div>Pencillin</div>
+                  </div>
+                  <div className="allergies-inner-div">
+                    <div>
+                      <CircleIcon id="client-allergies-dot" />
+                    </div>
+                    <div>IV Contrast</div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div>
+                <div>
+                  <div
+                    style={{
+                      letterSpacing: "2px",
+                      borderBottom: "1px solid black",
+                    }}
+                  >
+                    Conditions
+                  </div>
+                </div>
+                <br />
+                <div
+                  style={{
+                    fontFamily: "Roboto",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.2rem",
+                  }}
+                >
+                  <div className="allergies-inner-div">
+                    <div>
+                      <CircleIcon id="client-allergies-dot" />
+                    </div>
+                    <div>Diabetes</div>
+                  </div>
+                  <div className="allergies-inner-div">
+                    <div>
+                      <CircleIcon id="client-allergies-dot" />
+                    </div>
+                    <div>Hypertension</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div style={{ marginTop: "0rem" }}>
-            {props.toggleState == 1 && (
-              <Record handleOverScreen={handleOverScreen} />
-            )}
-            {props.toggleState == 0 && <PatientTimeLine />}
+          <div className="top-right-div">
+            <div>
+              <div>
+                <ToggleText handleToggle={props.handleToggleState} />
+              </div>
+            </div>
+            <div style={{ width: "100%", height: "70vh", overflowY: "scroll" }}>
+              {props.toggleState == 1 && (
+                <Record handleOverScreen={handleOverScreen} />
+              )}
+              {props.toggleState == 0 && <PatientTimeLine />}
+            </div>
           </div>
         </div>
       </div>
