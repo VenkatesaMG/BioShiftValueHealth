@@ -21,8 +21,6 @@ export default function record(props) {
   }
 
   function generateReport() {
-    props.handleOverScreen();
-
     if (!file) {
       console.log("No file selected");
       return;
@@ -49,6 +47,7 @@ export default function record(props) {
     } catch (error) {
       console.log("Error:", error);
     }
+    props.handleOverScreen();
   }
 
   const handleFileChange = (event) => {
@@ -56,29 +55,10 @@ export default function record(props) {
     if (selectedFile) {
       setFile(selectedFile);
       console.log("File selected:", selectedFile.name);
+      return;
     } else {
       console.log("No File Selected");
       return;
-    }
-
-    const formData = new FormData();
-    formData.append("file", file);
-
-    try {
-      axios
-        .post("http://127.0.0.1:5000/upload", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        })
-        .then((response) => {
-          console.log("File uploaded successfully", response.data);
-        })
-        .catch((error) => {
-          console.error("Error uploading file:", error);
-        });
-    } catch (error) {
-      console.log("Error:", error);
     }
   };
 
