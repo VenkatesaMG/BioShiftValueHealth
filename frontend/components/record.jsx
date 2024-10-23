@@ -60,6 +60,10 @@ export default function record(props) {
       console.log("No File Selected");
       return;
     }
+
+    const formData = new FormData();
+    formData.append("file", file);
+
     try {
       axios
         .post("http://127.0.0.1:5000/upload", formData, {
