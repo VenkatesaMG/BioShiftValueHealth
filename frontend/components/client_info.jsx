@@ -44,7 +44,7 @@ export default function client_info(props) {
             <div className="patient-details">
               <div className="patient-details-div">
                 <div className="label-div">Name:</div>
-                <div className="detail-fill">Kevin</div>
+                <div className="detail-fill">John Doe</div>
               </div>
               <div className="patient-details-div">
                 <div className="label-div">Gender:</div>
