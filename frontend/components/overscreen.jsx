@@ -3,23 +3,8 @@ import * as React from "react";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
-import { STRUCT } from "../data/report.js";
-import { useEffect, useState } from "react";
-import axios from "axios";
 
 export default function OverScreen(props) {
-  const [STRUCTURE, setSTRUCTURE] = useState(STRUCT);
-  useEffect(() => {
-    axios
-      .get("http://127.0.0.1:5000/upload")
-      .then((response) => {
-        setSTRUCTURE(response.data);
-      })
-      .catch((error) => {
-        console.log("Error: ", error);
-      });
-  }, []);
-
   const renderContent = (content) => {
     if (Array.isArray(content)) {
       return content.map((item, index) => (
@@ -46,10 +31,10 @@ export default function OverScreen(props) {
   const PatientRecord = () => {
     return (
       <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-        {Object.keys(STRUCTURE).map((section) => (
+        {Object.keys(props.STRUCTURE).map((section) => (
           <div key={section} className="section-container">
             <div className="parent-title">{section}</div>
-            {renderContent(STRUCTURE[section])}
+            {renderContent(props.STRUCTURE[section])}
           </div>
         ))}
       </div>

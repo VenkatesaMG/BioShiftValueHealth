@@ -41,6 +41,7 @@ export default function record(props) {
         .then((response) => {
           console.log("File uploaded successfully", response.data);
           setGenerateReport(response.data);
+          props.handleDiagnosisReport(response.data);
         })
         .catch((error) => {
           console.error("Error uploading file:", error);

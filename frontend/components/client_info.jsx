@@ -7,9 +7,16 @@ import PatientTimeLine from "./timeline";
 import OverScreen from "./overscreen";
 import { useState } from "react";
 import CircleIcon from "@mui/icons-material/Circle";
+import { STRUCT } from "../data/report.js";
 
 export default function client_info(props) {
   const [overscreen, setOverScreen] = useState(false);
+  const [diagnosisReport, setDiagnosisReport] = useState(STRUCT);
+
+  function handleDiagnosisReport(value) {
+    setDiagnosisReport(value);
+  }
+
   function handleOverScreen() {
     setOverScreen((prevState) => !prevState);
     console.log("In handle over screen");
@@ -32,7 +39,12 @@ export default function client_info(props) {
           </div>
         </div>
       </div>
-      {overscreen && <OverScreen handleOverScreen={handleOverScreen} />}
+      {overscreen && (
+        <OverScreen
+          handleOverScreen={handleOverScreen}
+          STRUCTURE={diagnosisReport}
+        />
+      )}
       <div
         className={overscreen ? "dimmed client-info-page" : "client-info-page"}
       >
@@ -168,7 +180,10 @@ export default function client_info(props) {
             </div>
             <div style={{ width: "100%", height: "70vh", overflowY: "scroll" }}>
               {props.toggleState == 1 && (
-                <Record handleOverScreen={handleOverScreen} />
+                <Record
+                  handleOverScreen={handleOverScreen}
+                  handleDiagnosisReport={handleDiagnosisReport}
+                />
               )}
               {props.toggleState == 0 && <PatientTimeLine />}
             </div>
