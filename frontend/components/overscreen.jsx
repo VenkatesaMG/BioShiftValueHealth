@@ -3,9 +3,23 @@ import * as React from "react";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
-import { STRUCTURE } from "../data/report.js";
+import { STRUCT } from "../data/report.js";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function OverScreen(props) {
+  const [STRUCTURE, setSTRUCTURE] = useState(STRUCT);
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:5000/upload")
+      .then((response) => {
+        setSTRUCTURE(response.data);
+      })
+      .catch((error) => {
+        console.log("Error: ", error);
+      });
+  }, []);
+
   const renderContent = (content) => {
     if (Array.isArray(content)) {
       return content.map((item, index) => (

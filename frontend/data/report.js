@@ -1,4 +1,4 @@
-export const STRUCTURE = {
+export const STRUCT = {
   "Visit Details": {
     "Visit motivation":
       "Why the patient came for the visit (e.g., abdominal pain, hematemesis)",
