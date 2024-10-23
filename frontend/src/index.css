@@ -674,6 +674,7 @@ body::-webkit-scrollbar {
   font-size: 0.875rem;
   line-height: 1.5;
   height: 75vh;
+  overflow-y: scroll;
 }
 
 .overscreen-footer {

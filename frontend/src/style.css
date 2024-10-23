@@ -309,3 +309,23 @@
     border-radius:1rem;
     border:1px solid black;
 } */
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-container .parent-title {
+  font-family: "Roboto";
+  margin: 0.5rem 0rem;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.key-value-item {
+  margin-left: 1rem;
+}
+.section-container .key-value-item .key {
+  font-weight: 500;
+}

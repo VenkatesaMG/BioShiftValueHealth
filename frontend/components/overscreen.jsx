@@ -3,8 +3,45 @@ import * as React from "react";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import { STRUCTURE } from "../data/report.js";
 
-export default function overScreen(props) {
+export default function OverScreen(props) {
+  const renderContent = (content) => {
+    if (Array.isArray(content)) {
+      return content.map((item, index) => (
+        <div key={index} className="key-value-container">
+          {Object.keys(item).map((key) => (
+            <div key={key} className="key-value-item">
+              <div className="key">{key}:</div>
+              <div className="value">{item[key]}</div>
+            </div>
+          ))}
+        </div>
+      ));
+    } else if (typeof content === "object") {
+      return Object.keys(content).map((key) => (
+        <div key={key} className="key-value-item">
+          <div className="key">{key}:</div>
+          <div className="value">{content[key]}</div>
+        </div>
+      ));
+    }
+    return null;
+  };
+
+  const PatientRecord = () => {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+        {Object.keys(STRUCTURE).map((section) => (
+          <div key={section} className="section-container">
+            <div className="parent-title">{section}</div>
+            {renderContent(STRUCTURE[section])}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="overscreen-outer">
       <div className="overscreen">
@@ -21,30 +58,22 @@ export default function overScreen(props) {
           </div>
         </div>
         <div className="overscreen-main">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iusto
-            corrupti minus architecto quas dolores aut vel dolore, laboriosam
-            voluptatum repellendus, hic repellat enim facere molestias! Earum
-            dolorem aliquid suscipit?Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Hic aliquid nisi a dolor nihil corrupti recusandae
-            velit labore neque. Ea esse debitis praesentium eveniet ut eaque
-            alias ducimus nemo corrupti!
-          </p>
+          {/* Call the PatientRecord function */}
+          <PatientRecord />
         </div>
         <div>
           <div className="overscreen-footer">
             <div>
-              <div>
-                <Button
-                  variant="outlined"
-                  href=""
-                  id="overscreen-footer-btn"
-                  style={{ marginLeft: "5px" }}
-                  // onClick = {props.downloadFile()}
-                >
-                  <FileDownloadOutlinedIcon />
-                </Button>
-              </div>
+              <Button
+                variant="outlined"
+                href=""
+                id="overscreen-footer-btn"
+                style={{ marginLeft: "5px" }}
+                // Implement file download function
+                onClick={() => props.downloadFile && props.downloadFile()}
+              >
+                <FileDownloadOutlinedIcon />
+              </Button>
             </div>
           </div>
         </div>
