@@ -41,7 +41,7 @@ git commit -m "Description of changes"
 git push origin feature-branch
 ```
 
-## 6️⃣ Create a Pull Request (PR)
+## 6️⃣ Create a Pull Request (PR) 
 1. Go to **your forked repository**.
 2. Click on **Compare & pull request**.
 3. Ensure the **base repository** is the original repo and the **head repository** is your fork.
